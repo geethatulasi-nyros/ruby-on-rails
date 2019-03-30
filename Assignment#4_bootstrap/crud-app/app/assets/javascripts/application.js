@@ -1,8 +1,7 @@
 //= require jquery
 //= require popper
-//= require turbolinks
 //= require bootstrap
-//= require_tree.
+//= require index.js
 //=require jquery_ujs
 //=require bootbox
  
