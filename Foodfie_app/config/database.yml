@@ -1,0 +1,29 @@
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 8000
+
+development:
+  <<: *default
+  encoding: utf8
+  database:  foodfie_development
+  host: 127.0.0.1
+  username: admin
+  password: root
+  socket: /tmp/mysql.soc
+
+test:
+  <<: *default
+  database:  foodfie_test
+  host: 127.0.0.1
+  username: admin
+  password: root
+  socket: /tmp/mysql.soc
+
+production:
+  <<: *default
+  database:  foodfie_production
+  host: 127.0.0.1
+  username: admin
+  password: root
+  socket: /tmp/mysql.soc
