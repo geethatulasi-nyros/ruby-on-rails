@@ -32,7 +32,7 @@
 	 	 			</div>
 	 	 			<div class="col-md-4">
 	 	 			 	<%= form_with model: @dish, local: true do |form| %>
-	 	 					<%= select_tag("dishes_page", options_for_select([["5+","5+"],["7+","7+"],["9+","9+"]]), {prompt: 'ALL RATINGS', :name => "dishes_per_page", :class=>"form-control sort", id:"ratings", remote: true} ) %>
+	 	 					<%= select_tag("dishes_page", options_for_select([["5+","5"],["7+","7"],["9+","9"]]), {prompt: 'ALL RATINGS', :name => "dishes_per_page", :class=>"form-control sort", id:"ratings", remote: true} ) %>
 	 	 				<% end %>
 	 	 			</div>
 	 	 			<div class="col-md-4">

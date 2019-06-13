@@ -7,6 +7,7 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.3'
 # Use mysql2 as the database for Active Record
 gem 'mysql2', '~>0.5.2'
+gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -76,7 +77,7 @@ gem 'font-awesome-rails'
 gem 'will_paginate' 
 gem 'will_paginate-bootstrap' 
 gem 'jquery-ui-rails'
-# gem 'bootstrap-slider-rails'
+gem 'bootstrap-slider-rails'
 gem 'rack-cors'
  
 group :test do
@@ -87,3 +88,5 @@ group :test do
 end
 
  gem 'content-type'
+ # gem 'figaro'
+ gem 'dotenv-rails' 

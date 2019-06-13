@@ -3,8 +3,8 @@ $(document).ready(function(){
   $(".see-more-btn").click(function(){
 		counter ++;
 		$.ajax({
-		 	url: 'http://10.90.90.148:3000',
-		 	type: 'get',
+		 	url: '/',
+		 	type: 'GET',
 			dataType: 'script',
 			data: {"page": counter}
 		}).then(function(){
@@ -13,10 +13,10 @@ $(document).ready(function(){
 			}
 		}); 
 	});
-	$("#filter").change(function(){
- 	  $.ajax({
- 		  url: 'http://10.90.90.148:3000/dishes/search',
- 		  type:'POST',
+  $("#filter").change(function(){
+  $.ajax({
+ 		  url: '/dishes/sort',
+ 		  type:'GET',
  		  dataType: "script",
  		  data:{filter: this.value},
  		  success: function(response){	
@@ -25,8 +25,8 @@ $(document).ready(function(){
   });
   $("#ratings").change(function(){
   	$.ajax({
- 		  url: 'http://10.90.90.148:3000/dishes/search',
- 		  type:'POST',
+ 		  url: '/dishes/sort',
+ 		  type:'GET',
  		  dataType: "script",
  		  data:{ratings: this.value},
  		  success: function(response){	
@@ -40,8 +40,8 @@ $(document).ready(function(){
       ids.push(checkedBoxes[i].value)
     }
     $.ajax({
- 		  url: 'http://10.90.90.148:3000/dishes/search',
- 		  type:'POST',
+ 		  url: '/dishes/sort',
+ 		  type:'GET',
  		  dataType: "script",
  		  data:{categoryfilter: ids},
  		  success: function(response){	
@@ -61,8 +61,8 @@ $(document).ready(function(){
       $("#min-amount").text(ui.values[0]);
       $("#max-amount").text(ui.values[1]);
       $.ajax({
-        url: '/dishes/search',
-        type:'POST',
+        url: '/dishes/sort',
+        type:'GET',
         dataType: "script",
         data:{min_rangefilter: minprice,max_rangefilter: maxprice},
         success: function(response){  
